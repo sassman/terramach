@@ -21,3 +21,4 @@ pub mod gl;
 
 pub use display::*;
 pub use skia_safe::*;
+pub use skia_safe::canvas::SaveLayerRec;

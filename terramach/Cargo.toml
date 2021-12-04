@@ -12,7 +12,7 @@ path = "ui/lib.rs"
 default = []
 
 [build-dependencies]
-bindgen = "0.53.2"
+bindgen = "0.59"
 
 [dependencies]
 terramach-support = { path = "support" }

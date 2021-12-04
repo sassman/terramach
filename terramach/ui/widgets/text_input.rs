@@ -746,7 +746,8 @@ impl TextState {
         } else {
             position - 1
         };
-        let line_metric = paragraph.get_line_metrics().iter().last().unwrap();
+        let line_metrics = paragraph.get_line_metrics();
+        let line_metric = line_metrics.last().unwrap();
         let line_height = line_metric.height as f32;
         let boxes = paragraph.get_rects_for_range(
             index..index + 1,

@@ -1,7 +1,5 @@
 [workspace]
 members = [
     "terramach",
-    "third-party/mapbox",
-    "examples/dashboard",
     "examples/counter",
 ]

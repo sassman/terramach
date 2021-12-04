@@ -9,7 +9,7 @@ build = "build.rs"
 gl_generator = "0.14.0"
 
 [dependencies.skia-safe]
-version = "0.27.1"
+version = "0.45"
 features = ["gl", "textlayout"]
 
 [target.'cfg(target_os = "macos")'.dependencies]

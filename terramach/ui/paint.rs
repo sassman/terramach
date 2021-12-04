@@ -58,10 +58,10 @@ impl PaintContext {
         let bounds = Rect::from_size(self.size);
         let recorder = self.recorder.get_or_insert_with(|| {
             let mut recorder = PictureRecorder::new();
-            recorder.begin_recording(bounds, None, None);
+            recorder.begin_recording(bounds, None);
             recorder
         });
-        recorder.recording_canvas()
+        recorder.recording_canvas().unwrap()
     }
 
     fn push_current_if_any(&mut self) {

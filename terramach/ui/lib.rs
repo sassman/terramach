@@ -16,7 +16,6 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>
  */
 
-#![feature(vec_remove_item)]
 #![feature(panic_info_message)]
 
 #[cfg(any(target_os = "macos", target_os = "ios"))]

@@ -141,7 +141,10 @@ impl<T> Tree<T> {
         self.nodes.remove(&id)?;
         let parent = self.child_parent.remove(&id).unwrap();
         if let Some(children) = self.parent_children.get_mut(&parent) {
-            children.remove_item(&id);
+            if children.contains(&id) {
+                let i = children.binary_search(&id).unwrap();
+                children.remove(i);
+            }
         }
         let mut removed = vec![id];
         self.ids.give(id);

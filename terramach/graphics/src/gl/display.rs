@@ -47,7 +47,7 @@ impl<T: 'static> Display<T> {
     ) -> Option<Self> {
         gl::load_with(|symbol| (load_function)(&mut info, symbol));
         let interface = gpu::gl::Interface::new_load_with(|symbol| load_function(&mut info, symbol));
-        let context = gpu::Context::new_gl(interface)?;
+        let context = gpu::Context::new_gl(interface, None)?;
         Some(Display {
             size: size.into(),
             info: Arc::new(Mutex::new(info)),
